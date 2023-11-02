@@ -1,0 +1,1 @@
+mvn clean compile jib:dockerBuild && docker kill $(docker ps -q); docker-compose -f docker-compose.yml up
