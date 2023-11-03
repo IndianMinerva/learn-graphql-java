@@ -1,7 +1,7 @@
 scalar LocalDateTime
 
 type Query {
-    schedule(coach: Coach!): [FitnessClass]!
+    schedule(coach: Coach!): [FitnessClass!]!
 }
 
 enum Coach {
@@ -11,10 +11,10 @@ enum Coach {
 
 type FitnessClass {
     id: ID!
-    coach: Coach
-    startsAt: LocalDateTime
-    endsAt: LocalDateTime
-    difficulty: Difficulty
+    coach: Coach!
+    startsAt: LocalDateTime!
+    endsAt: LocalDateTime!
+    difficulty: Difficulty!
 }
 
 enum Difficulty {
