@@ -1,4 +1,4 @@
-package com.learn.graphql.fitness.model;
+package com.learn.graphql.model;
 
 import lombok.Builder;
 
