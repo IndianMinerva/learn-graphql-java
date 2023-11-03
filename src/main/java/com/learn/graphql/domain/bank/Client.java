@@ -7,8 +7,9 @@ import java.util.UUID;
 
 @Value
 @Builder
-public class BankAccount {
+public class Client {
     UUID id;
-    Client client;
-    Currency currency;
+    String firstName;
+    String[] middleNames;
+    String lastName;
 }

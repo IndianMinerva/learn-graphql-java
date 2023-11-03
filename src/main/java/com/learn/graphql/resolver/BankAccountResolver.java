@@ -1,6 +1,7 @@
 package com.learn.graphql.resolver;
 
 import com.learn.graphql.domain.bank.BankAccount;
+import com.learn.graphql.domain.bank.Client;
 import com.learn.graphql.domain.bank.Currency;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +16,7 @@ public class BankAccountResolver implements GraphQLQueryResolver {
         log.info("Account id: {}", id);
         return BankAccount.builder()
                 .id(id)
-                .name("One")
+                .client(Client.builder().id(UUID.randomUUID()).firstName("First").lastName("Last").middleNames(null).build())
                 .currency(Currency.CHF)
                 .build();
     }
