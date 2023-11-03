@@ -2,6 +2,8 @@ server:
   http2:
     enabled: true
 graphql:
+  servlet:
+    maxQueryDepth: 2
   graphiql:
     enabled: true
   playground:

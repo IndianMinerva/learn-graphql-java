@@ -14,9 +14,16 @@ import java.util.UUID;
 public class BankAccountResolver implements GraphQLQueryResolver {
     public BankAccount bankAccount(UUID id) {
         log.info("Account id: {}", id);
+        Client client1 = Client.builder().id(UUID.randomUUID()).firstName("Neo").lastName("The One").build();
+        Client client2 = Client.builder().id(UUID.randomUUID()).firstName("Trinity").lastName("The None").build();
+
+        client1.setClient(client2);
+        client2.setClient(client1);
+
+
         return BankAccount.builder()
                 .id(id)
-                .client(Client.builder().id(UUID.randomUUID()).firstName("First").lastName("Last").middleNames(null).build())
+                .client(client1)
                 .currency(Currency.CHF)
                 .build();
     }
