@@ -1,8 +1,9 @@
 server:
   http2:
     enabled: true
-
 graphql:
+  graphiql:
+    enabled: true
   playground:
     enabled: true
 voyager:
