@@ -6,4 +6,4 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Builder
-public record Fitness(UUID id, Coach coach, LocalDateTime startsAt, LocalDateTime endsAt, Difficulty difficulty){}
+public record FitnessClass(UUID id, Coach coach, LocalDateTime startsAt, LocalDateTime endsAt, Difficulty difficulty){}
